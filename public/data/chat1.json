@@ -1,0 +1,35 @@
+{
+    "chatId": 1,
+    "chatInfo": {
+        "type": "team",
+        "name": "Чат для переговоров",
+        "users": [
+            {
+                "id": 1,
+                "firstName": "Иван",
+                "lastName": "Лучегов"
+            },
+            {
+                "id": 2,
+                "firstName": "Евгений",
+                "lastName": "Евгеенев"
+            }
+        ]
+    },
+    "messages": [
+        {
+            "id": 1,
+            "text": "Тестовое сообщение",
+            "userId": 2,
+            "date": 1746678145811,
+            "type": "text"
+        },
+        {
+            "id": 2,
+            "text": "Вот и поговорили",
+            "userId": 1,
+            "date": 1746678185811,
+            "type": "text"
+        }
+    ]
+}

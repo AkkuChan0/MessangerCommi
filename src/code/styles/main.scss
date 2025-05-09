@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+html {
+    --background-color: #EFEFEF;
+    --panel-color: #FFFFFF;
+    --button-color: #E3E3E3;
+    --button-hover-color: #c9c9c93e;
+    --chat-button-hover-color: rgba(74, 144, 215, 0.326);
+
+    --main-text-color: #343434;
+    --meta-text-color: #808080;
+
+    --main-color: #4A91D7;
+
+    --border-color: #C9C9C9;
+
+    --placeholder-color: #C9C9C9;
+
+    --online-color: #2AA113;
+    --dont-disturb0-color: #F24822;
+    --offline-color: #C9C9C9;
+}
+
+* {
+    box-sizing: border-box;
+    color: var(--main-text-color);
+}
+
+.main {
+    background-color: var(--background-color);
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+    font-family: 'Open Sans',  sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.icon-button {
+    transition: .2s ease-in-out;
+    border-radius: 100%;
+
+    &:hover {
+        background-color: var(--button-hover-color) !important;
+    }
+
+    &:active {
+        transform: scale(0.965);
+    }
+}
+
+.react-resizable-handle {
+    min-width: 3px;
+    max-width: 3px;
+    transition: .2s ease;
+    cursor: col-resize;
+    margin: 35px 0;
+
+    &:hover, &:active {
+        cursor: e-resize;
+        background-color: var(--main-color);
+        box-shadow: 1px 1px 5px var(--main-color);
+        opacity: 0.4;
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+    }
+}

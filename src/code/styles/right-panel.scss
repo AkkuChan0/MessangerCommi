@@ -1,0 +1,125 @@
+.right-panel {
+    background-color: var(--panel-color);
+    margin: 20px;
+    margin-left: 0px;
+    float: right;
+    justify-self: end;
+    border-radius: 16px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    .in-chat-control {
+        height: 71px;
+        display: flex;
+        justify-content: space-between;
+        padding: 16px 32px;
+        padding-right: 16px;
+        border-bottom: 1px solid var(--border-color);
+
+        .chat-info {
+            user-select: none;
+
+            .name {
+                font-size: 16px;
+            }
+
+            .status-info {
+                display: flex;
+                padding-top: 2px;
+
+                .status {
+                    width: 8px;
+                    height: 8px;
+                    border-radius: 100%;
+                    margin: auto 0;
+                    background-color: var(--placeholder-color);
+                }
+
+                .status-text {
+                    padding-left: 8px;
+                    font-size: 14px;
+                }
+
+                .online {
+                    background-color: var(--online-color);
+                }
+
+                .dont-disturb {
+                    background-color: var(--dont-disturb-color);
+                }
+            }
+        }
+
+        .chat-buttons {
+            display: flex;
+            gap: 16px;
+
+            button {
+                width: 40px;
+                height: 40px;
+                background-size: 80%;
+                border: none;
+                background-color: inherit;
+                background-repeat: no-repeat;
+                background-position: center;
+                margin: auto 0;
+                cursor: pointer;
+            }
+            .additionally {
+            }
+        }
+    }
+
+    .scroll-block {
+        height: calc(100% - 58px - 71px - 16px);
+        overflow: scroll;
+        overflow-y: hidden;
+    }
+
+    .write-message-block {
+        position: absolute;
+        width: 90%;
+        min-width: 300px;
+        max-width: 980px;
+        bottom: 16px;
+        background-color: var(--panel-color);
+        border: 1px solid var(--border-color);
+        border-radius: 8px;
+        display: flex;
+        justify-content: space-between;
+        align-self: center;
+        padding: 8px 8px;
+
+        button {
+            min-width: 40px;
+            max-width: 40px;
+            height: 40px;
+            background-color: inherit;
+            background-position: center;
+            border: none;
+            margin: auto 0;
+            background-size: 70%;
+            background-repeat: no-repeat;
+            cursor: pointer;
+        }
+
+        .content {
+            display: flex;
+            width: 100%;
+
+            input {
+                border: none;
+                width: 100%;
+                outline: none;
+                padding: 0px 16px;
+                font-size: 14px;
+            }
+        }
+        .buttons {
+            display: flex;
+            gap: 8px;
+        }
+    }
+}

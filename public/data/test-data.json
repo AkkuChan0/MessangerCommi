@@ -1,0 +1,30 @@
+{
+    "authUser": {
+        "userId": 1,
+        "firstName": "Иван",
+        "lastName": "Лучегов",
+        "positionAtWork": "Web-разработчик"
+    },
+    "groups": [
+        {
+            "id": 1,
+            "name": "Важное"
+        }
+    ],
+    "chats": [
+        {
+            "id": 1,
+            "groupId": 1,
+            "name": "Чат для переговоров",
+            "lastMessage": "Вот и поговорили",
+            "lastMessageDate": 1746678185811
+        },
+        {
+            "id": 2,
+            "groupId": 1,
+            "name": "Тестировщики",
+            "lastMessage": "Протестили кое что",
+            "lastMessageDate": 1746678326122
+        }
+    ]
+}

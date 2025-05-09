@@ -1,24 +1,43 @@
-import logo from './logo.svg';
-import './App.css';
+import './code/styles/main.scss';
+import './icons.css';
+
+import { Resizable } from 'react-resizable';
+import { useState } from 'react';
+
+import LeftPanel from "./code/views/LeftPanel";
+import RightPanel from "./code/views/RightPanel";
 
 function App() {
+
+  let startBlockWidth = localStorage.getItem("selectBlockWidth") ? Number(localStorage.getItem("selectBlockWidth")) : 300;
+
+  const [selectBlockWidth, setSelectBlockWidth] = useState(startBlockWidth);
+
+  const handleResize = (e, { size, handle, edge }) => {
+      const _selectBlockWidth = size.width;
+      const chatBlockWidth = window.innerWidth - _selectBlockWidth;
+      setSelectBlockWidth(size.width);
+      localStorage.setItem("selectBlockWidth", String(_selectBlockWidth));
+      document.querySelector('.right-panel').style.width = chatBlockWidth + 'px';
+      document.querySelector('.left-panel').style.width = _selectBlockWidth + 'px'; 
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <div className="main">
+              <LeftPanel width={{selectBlockWidth}}></LeftPanel>
+              <Resizable
+                  height={0}
+                  onResize={handleResize}
+                  minConstraints={[300, 0]}
+                  maxConstraints={[800, 0]}
+                  resizeHandles={['e']}
+                  width={selectBlockWidth}
+                  style={{"width": String(startBlockWidth) + "px"}}
+              > 
+                <></>
+              </Resizable>
+              <RightPanel width={{selectBlockWidth}}></RightPanel>
+      </div>
   );
 }
 
