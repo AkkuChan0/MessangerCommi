@@ -76,3 +76,30 @@ hr {
     height: 2;
     color: #C9C9C9;
 }
+
+.loading {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+
+    .spinner {
+        width: 40px;
+        height: 40px;
+        animation: spin 1.1s cubic-bezier(.45,.05,.55,.95) infinite;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: 100%;
+    }
+
+    @keyframes spin {
+        to {
+            transform: rotate(360deg);
+        }
+    }
+}

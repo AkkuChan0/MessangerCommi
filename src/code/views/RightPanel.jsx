@@ -1,5 +1,5 @@
 import MessageList from '../components/MessageList';
-import TaskManager from '../components/TaskManager';
+import TaskManager from '../components/TaskManager/TaskManager';
 import '../styles/right-panel.scss';
 import { useSelector } from 'react-redux';
 

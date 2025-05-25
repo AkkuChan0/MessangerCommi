@@ -1,6 +1,6 @@
 import CalendarButton from "./CalendarButton"
 import InformationButton from "./InformationButton"
-import TaskManagerButton from "./TaskManagerButton";
+import TaskManagerButton from "./TaskManager/TaskManagerButton";
 
 const CommunityBlock = () => {
     return (
