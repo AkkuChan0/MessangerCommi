@@ -192,4 +192,61 @@
             gap: 8px;
         }
     }
+
+    .tasks-list {
+
+        .task {
+            margin: 8px 16px;
+            display: flex;
+            flex-direction: column;
+            padding: 8px 16px;
+            background-color: var(--button-hover-color);
+            border-radius: 8px;
+            cursor: pointer;
+            transition: .1s ease-in-out;
+
+            &:hover {
+                background-color: var(--button-color);
+            }
+
+            .task-header {
+                display: flex;
+                gap: 4px;
+                
+                .task-tag {
+                    color: var(--main-color);
+                    text-decoration: none;
+
+                    &::after {
+                        content: '·';
+                        margin-left: 4px;
+                    }
+                }
+            }
+
+            .task-content {
+                display: flex;
+                flex-direction: row;
+                gap: 8px;
+
+                div {
+
+                    &::after {
+                        content: '·';
+                        margin-left: 8px;
+                    }
+
+                    &:last-of-type::after {
+                        content: '';
+                        margin-left: 0;
+                    }
+
+                    span {
+                        font-size: 14px;
+                        color: var(--meta-text-color);
+                    }
+                }
+            }
+        }
+    }
 }

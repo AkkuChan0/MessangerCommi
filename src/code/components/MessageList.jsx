@@ -27,7 +27,6 @@ const MessageList = () => {
                 }
                 </>
             }
-
         </div>
     )
 }

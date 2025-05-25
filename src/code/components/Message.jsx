@@ -3,7 +3,6 @@ const Message = (props) => {
 
     let isYou = false;
 
-    console.log(props)
     if (user.id == props.authUser.userId) isYou = true;
 
     const messageDate = new Date(props.message.date);

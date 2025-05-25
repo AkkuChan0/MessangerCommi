@@ -4,6 +4,7 @@ import axios from 'axios';
 export const fetchChatMessages = createAsyncThunk(
     'selectedChat/fetchChatMessages',
     async (chatId) => {
+        if (chatId < 0) return [];
         try {
             const response = await axios.get(`/data/chat${chatId}.json`);
             return response.data || [];

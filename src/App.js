@@ -41,7 +41,6 @@ function App() {
                   maxConstraints={[800, 0]}
                   resizeHandles={['e']}
                   width={selectBlockWidth}
-                  style={{"width": String(startBlockWidth) + "px"}}
               > 
                 <></>
               </Resizable>
