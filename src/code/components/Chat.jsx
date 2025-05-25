@@ -1,9 +1,10 @@
-import { selectedChat, setSelectedChat } from '../../store/features/selectedChatSlice';
+import { selectedChat, setSelectedChat, fetchChatMessages } from '../../store/features/selectedChatSlice';
 import { useDispatch, useSelector } from 'react-redux';
 
 function Chat(props) {
     const dispatch = useDispatch();
     const selectChat = () => {
+        dispatch(fetchChatMessages(props.chat.id));
         dispatch(setSelectedChat(props.chat.id));
     }
     const _selectedChat = useSelector((state) => state.selectedChat.selectedChat);

@@ -3,12 +3,11 @@ import axios from 'axios';
 
 export const fetchChatMessages = createAsyncThunk(
     'selectedChat/fetchChatMessages',
-    async (chatId, { rejectWithValue }) => {
+    async (chatId) => {
         try {
             const response = await axios.get(`/data/chat${chatId}.json`);
             return response.data || [];
         } catch (error) {
-            return rejectWithValue(error.message);
         }
     }
 );

@@ -72,10 +72,80 @@
         }
     }
 
+    @keyframes dissolveShowMessages {
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
+
     .scroll-block {
         height: calc(100% - 58px - 71px - 16px);
         overflow: scroll;
         overflow-y: hidden;
+        align-content: end;
+        opacity: 0;
+        animation: dissolveShowMessages 2s ease-out forwards;
+
+        .message-block {
+            display: flex;
+            margin: 0px 8px;
+
+            .image {
+                min-width: 30px;
+                max-width: 30px;
+                height: 30px;
+                border-radius: 100%;
+                background-color: var(--placeholder-color);
+                margin: auto 0 8px;
+            }
+
+            .message {
+                background-color: var(--message-user-block-color);
+                width: fit-content;
+                max-width: 300px;
+                padding: 12px;
+                border-radius: 12px;
+                border-bottom-left-radius: 4px;
+                margin: 8px;
+                display: flex;
+                flex-direction: column;
+    
+                &.my-self {
+                    background-color: var(--message-myself-block-color);
+                    border-bottom-left-radius: 12px;
+                    border-bottom-right-radius: 4px;
+                    float: right;
+                    margin: 8px 8px 8px auto;
+    
+                    .date {
+                        float: left;
+                        align-self: start;
+                    }
+                }
+    
+                .name {
+                    font-size: 14px;
+                    color: var(--main-color);
+                }
+                .message-text {
+                    font-size: 14px;
+                }
+                .date {
+                    padding-top: 4px;
+                    span {
+                        
+                        float: right;
+                        align-self: end;
+
+                        font-size: 10px;
+                        color: var(--meta-text-color) !important;
+                    }
+                }
+            }
+        }
     }
 
     .write-message-block {

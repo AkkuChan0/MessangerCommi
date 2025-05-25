@@ -19,6 +19,10 @@ html {
     --online-color: #2AA113;
     --dont-disturb0-color: #F24822;
     --offline-color: #C9C9C9;
+
+
+    --message-user-block-color: #EFEFEF;
+    --message-myself-block-color: #CCE5FF;
 }
 
 * {
@@ -65,4 +69,10 @@ html {
         border-top-left-radius: 10px;
         border-bottom-left-radius: 10px;
     }
+}
+
+hr {
+    background-color: #C9C9C9;
+    height: 2;
+    color: #C9C9C9;
 }

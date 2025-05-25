@@ -2,16 +2,25 @@ import './code/styles/main.scss';
 import './icons.css';
 
 import { Resizable } from 'react-resizable';
-import { useState } from 'react';
 
 import LeftPanel from "./code/views/LeftPanel";
 import RightPanel from "./code/views/RightPanel";
 
+import { useSelector, useDispatch } from 'react-redux';
+import { useEffect, useState } from "react";
+import { fetchAuth } from './store/features/userInfoSlice';
+
 function App() {
+  const dispatch = useDispatch();
 
   let startBlockWidth = localStorage.getItem("selectBlockWidth") ? Number(localStorage.getItem("selectBlockWidth")) : 300;
 
   const [selectBlockWidth, setSelectBlockWidth] = useState(startBlockWidth);
+
+
+  useEffect(() => {
+      dispatch(fetchAuth());
+  }, [dispatch]);
 
   const handleResize = (e, { size, handle, edge }) => {
       const _selectBlockWidth = size.width;
