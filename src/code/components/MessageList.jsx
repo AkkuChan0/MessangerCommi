@@ -21,15 +21,14 @@ const MessageList = () => {
                         {messages?.messages?.length > 0 &&
                             <>
                             {messages.messages.map(message => (
-                                <Message 
-                                    key={message.id}
-                                    message={message}
-                                    chatInfo={messages.chatInfo}
-                                    authUser={authUser}
-                                ></Message>
-                            ))
-
-                            }
+                                    <Message 
+                                        key={message.id}
+                                        message={message}
+                                        chatInfo={messages.chatInfo}
+                                        authUser={authUser}
+                                    ></Message>
+                                )
+                            )}
                             </>
                         }
                     </div>

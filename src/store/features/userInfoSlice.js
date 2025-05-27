@@ -1,7 +1,7 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
 
-export const fetchAuth = createAsyncThunk('chat/fetchChatList', async () => {
+export const fetchAuth = createAsyncThunk('chat/fetchUserInfo', async () => {
     const response = await axios.get('./data/test-data.json');
     return response.data.authUser;
 });
@@ -22,7 +22,7 @@ const authSlice = createSlice({
             })
             .addCase(fetchAuth.fulfilled, (state, action) => {
                 state.loading = false;
-                state.authUser = action.payload?.authUser || action.payload;
+                state.authUser = action.payload;
             })
             .addCase(fetchAuth.rejected, (state, action) => {
                 state.loading = false;
