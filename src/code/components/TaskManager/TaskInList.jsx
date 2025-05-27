@@ -1,6 +1,5 @@
 const TaskInList = ({ task }) => {
     
-    component
     return (
         <div data-taskid={task.id} className="task">
             <div className="task-header">
