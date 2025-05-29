@@ -1,34 +1,34 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
 
-export const fetchChatList = createAsyncThunk('chat/fetchChatList', async () => {
-    const response = await axios.get('/data/test-data.json');
+export const fetchAi = createAsyncThunk('chat/fetchAi', async () => {
+    const response = await axios.get('./data/ai_idea.json');
     return response.data;
 });
 
-const chatSlice = createSlice({
-    name: 'chat',
+const aiIdeaSlice = createSlice({
+    name: 'aiIdea',
     initialState: {
-        chatList: null,
+        idea: null,
         loading: false,
         error: null,
     },
     reducers: {},
     extraReducers: (builder) => {
         builder
-            .addCase(fetchChatList.pending, (state) => {
+            .addCase(fetchAi.pending, (state) => {
                 state.loading = true;
                 state.error = null;
             })
-            .addCase(fetchChatList.fulfilled, (state, action) => {
+            .addCase(fetchAi.fulfilled, (state, action) => {
                 state.loading = false;
-                state.chatList = action.payload;
+                state.idea = action.payload;
             })
-            .addCase(fetchChatList.rejected, (state, action) => {
+            .addCase(fetchAi.rejected, (state, action) => {
                 state.loading = false;
                 state.error = action.error.message;
             });
     },
 });
 
-export default chatSlice.reducer;
+export default aiIdeaSlice.reducer;

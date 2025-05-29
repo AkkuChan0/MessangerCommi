@@ -1,14 +1,17 @@
 import { useDispatch, useSelector } from "react-redux";
 import { setSelectedChat } from '../../../store/features/selectedChatSlice';
+import { useNavigate } from "react-router-dom";
 
 const TaskManagerButton = () => {
 
+    const navigate = useNavigate();
     const MANAGER_ID = -3;
     const dispatch = useDispatch();
 
     const _selectedChat = useSelector((state) => state.selectedChat.selectedChat);
 
     const selectManager = () => {
+        navigate('/manager')
         dispatch(setSelectedChat(MANAGER_ID));
     }
 

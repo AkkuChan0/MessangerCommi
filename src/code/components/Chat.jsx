@@ -1,9 +1,12 @@
+import { useNavigate } from 'react-router-dom';
 import { selectedChat, setSelectedChat, fetchChatMessages } from '../../store/features/selectedChatSlice';
 import { useDispatch, useSelector } from 'react-redux';
 
 function Chat(props) {
     const dispatch = useDispatch();
+    const navigate = useNavigate();
     const selectChat = () => {
+        navigate('/')
         dispatch(fetchChatMessages(props.chat.id));
         dispatch(setSelectedChat(props.chat.id));
     }

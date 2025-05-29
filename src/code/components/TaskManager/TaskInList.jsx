@@ -1,10 +1,14 @@
-const TaskInList = ({ task }) => {
+const TaskInList = ({ task, setTask }) => {
     
     return (
-        <div data-taskid={task.id} className="task">
+        <div 
+            data-taskid={task.id} 
+            className="task"
+            onClick={() => setTask(task)}
+        >
             <div className="task-header">
                 {task.tag && (
-                    <a href="#" className="task-tag">{task.tag}</a>
+                    <a href="#" className="task-tag">{task.tag}-{task.id}</a>
                 )}
                 {task.title && (
                     <span className="task-name">{task.title}</span>
@@ -26,13 +30,16 @@ const TaskInList = ({ task }) => {
                 {task.assignedTo && (
                     <div className="task-info assigned">
                         <span className='display-name'>Для:</span>
-                        <span className="info">{task.assignedTo}</span>
+                        <span className="info">{task.assignedTo.firstName} {task.assignedTo.lastName}</span>
+                    </div>
+                )}
+                {task.deadline && (
+                    <div className="task-info deadline">
+                        <span className='display-name'>Срок:</span>
+                        <span className="info">{new Date(task.deadline).toLocaleDateString()}</span>
                     </div>
                 )}
             </div>
-            {/* <div className="task-deadline">
-                <span className="deadline-text">{new Date(task.deadline).toLocaleDateString()}</span>
-            </div> */}
         </div>
     )
 }

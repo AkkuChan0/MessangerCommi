@@ -29,7 +29,7 @@ const RightPanel = (props) => {
                         </div>
                     </div>
 
-                    <MessageList></MessageList>
+                    <MessageList chat={selectedChat}></MessageList>
 
                     <div className='write-message-block'>
                         <div className='content'>

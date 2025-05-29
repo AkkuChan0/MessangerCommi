@@ -45,3 +45,11 @@
 .logo {
     background-image: url('data:image/svg+xml,<svg width="172" height="177" viewBox="0 0 172 177" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(%23clip0_43_1261)"><circle cx="50" cy="127" r="48.5" fill="white" stroke="%231E90FF" stroke-width="5"/><circle cx="60" cy="77" r="48.5" fill="white" stroke="%231E90FF" stroke-width="5"/><circle cx="100" cy="50" r="48.5" fill="white" stroke="%231E90FF" stroke-width="5"/><circle cx="122" cy="127" r="48.5" fill="white" stroke="%231E90FF" stroke-width="5"/></g><defs><clipPath id="clip0_43_1261"><rect width="172" height="177" fill="white"/></clipPath></defs></svg>');
 }
+
+.ai-idea-icon {
+    background-image: url('data:image/svg+xml,<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M17.25 2.62935L19.5934 11.4867C19.6518 11.7075 19.7678 11.9089 19.9294 12.0704C20.091 12.2319 20.2925 12.3477 20.5134 12.406L29.3714 14.7494C30.654 15.0894 30.654 16.9094 29.3714 17.2494L20.5127 19.5934C20.2919 19.6518 20.0905 19.7678 19.929 19.9294C19.7675 20.091 19.6517 20.2925 19.5934 20.5134L17.25 29.3714C16.91 30.654 15.09 30.654 14.75 29.3714L12.4067 20.5127C12.3482 20.2918 12.2323 20.0904 12.0707 19.929C11.9091 19.7675 11.7076 19.6517 11.4867 19.5934L2.62936 17.25C1.34669 16.91 1.34669 15.09 2.62936 14.75L11.488 12.4067C11.7089 12.3482 11.9103 12.2323 12.0718 12.0707C12.2332 11.9091 12.349 11.7076 12.4074 11.4867L14.7507 2.62869C15.0907 1.34602 16.9107 1.34602 17.2507 2.62869" stroke="%234A91D7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>');
+}
+
+.exit-icon {
+    background-image: url('data:image/svg+xml,<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5.33337 5.33334L26.6667 26.6667M5.33337 26.6667L26.6667 5.33334" stroke="%23808080" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>');
+}
